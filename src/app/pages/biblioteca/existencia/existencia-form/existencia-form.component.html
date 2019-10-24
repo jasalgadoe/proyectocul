@@ -2,44 +2,44 @@
 <form id="form_libro">
         <div class="form-row">
           <div class="form-group col-md-6">
-            <label for="inputEmail4">Año y lugar de edición</label>
-            <input type="text" class="form-control" id="inputEmail4" placeholder="Ej:Alicia en el pais de la maravilla">
+            <label>Año y lugar de edición</label>
+            <input type="text"  name="years_place" [(ngModel)]='years_place' class="form-control" placeholder="Ej:Alicia en el pais de la maravilla">
           </div>
           <div class="form-group col-md-6">
-            <label for="inputPassword4">Numero de Edicion</label>
-            <input type="text" class="form-control" id="inputPassword4" placeholder="1994-05-19">
+            <label>Numero de Edicion</label>
+            <input type="text" class="form-control" name="Nedicion" [(ngModel)]='Nedicion' placeholder="1994-05-19">
           </div>
         </div>
         <div class="form-row">
                 <div class="form-group col-md-6">
-                  <label for="inputEmail4">Precio</label>
-                  <input type="text" class="form-control" id="inputEmail4" placeholder="Pepito perez">
+                  <label>Precio</label>
+                  <input type="text" class="form-control" name="precio" [(ngModel)]='precio' placeholder="Pepito perez">
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="inputPassword4">Cubierta</label>
-                  <input type="text" class="form-control" id="inputPassword4" placeholder="fantasia">
+                  <label>Cubierta</label>
+                  <input type="text" class="form-control" name="cubierta" [(ngModel)]='cubierta' placeholder="fantasia">
                 </div>
         </div>
         <div class="form-row">
                 <div class="form-group col-md-6">
-                  <label for="inputEmail4">Paginas</label>
-                  <input type="text" class="form-control" id="inputEmail4" placeholder="Editorial">
+                  <label>Paginas</label>
+                  <input type="text" class="form-control" name="paginas" [(ngModel)]='paginas' placeholder="200p">
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="inputPassword4">Numeros de ejemplares</label>
-                  <input type="text" class="form-control" id="inputPassword4" placeholder="Aleman">
+                  <label>Numeros de ejemplares</label>
+                  <input type="text" class="form-control" name="nejemplares" [(ngModel)]='nejemplares' placeholder="Aleman">
                 </div>
         </div>
         <div class="form-row ">
                 <div class="form-group col-md-6">
-                  <label for="inputEmail4">Estanteria</label>
-                  <input type="text" class="form-control" id="inputEmail4" placeholder="200">
+                  <label>Estanteria</label>
+                  <input type="text" class="form-control" name="estanteria" [(ngModel)]='estanteria' placeholder="200">
                 </div>
                   
               
         </div>
                 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="button" (click)='Saveform()' class="btn btn-primary">Sign in</button>
         
       </form>
       
