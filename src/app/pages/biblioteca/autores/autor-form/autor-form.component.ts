@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AutorFormComponent implements OnInit {
 
+  public titulo="Autores";
+  public nombre:String;
+  public apellido:String;
+  public fechanac:String;
+  public nacionalidad:String;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  Savefrom(){
+    alert(this.nombre)
   }
 
 }

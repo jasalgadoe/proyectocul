@@ -2,32 +2,32 @@
 <form id="form_libro">
         <div class="form-row">
           <div class="form-group col-md-6">
-            <label for="inputEmail4">Titulo</label>
-            <input type="text" class="form-control" id="inputEmail4" placeholder="Ej:Alicia en el pais de la maravilla">
+            <label>Titulo</label>
+            <input type="text" class="form-control" name="libro" [(ngModel)]='libro' placeholder="Ej:Alicia en el pais de la maravilla">
           </div>
           <div class="form-group col-md-6">
-            <label for="inputPassword4">Fecha de lanzamiento</label>
-            <input type="text" class="form-control" id="inputPassword4" placeholder="1994-05-19">
+            <label>Fecha de lanzamiento</label>
+            <input type="text" class="form-control" name="fechalaz" [(ngModel)]='fechalaz' placeholder="1994-05-19">
           </div>
         </div>
         <div class="form-row">
                 <div class="form-group col-md-6">
-                  <label for="inputEmail4">autor</label>
-                  <input type="text" class="form-control" id="inputEmail4" placeholder="Pepito perez">
+                  <label>autor</label>
+                  <input type="text" class="form-control" name="autor" [(ngModel)]='autor' placeholder="Pepito perez">
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="inputPassword4">Area</label>
-                  <input type="text" class="form-control" id="inputPassword4" placeholder="fantasia">
+                  <label>Area</label>
+                  <input type="text" name="area" [(ngModel)]='area'  placeholder="fantasia">
                 </div>
         </div>
         <div class="form-row">
                 <div class="form-group col-md-6">
-                  <label for="inputEmail4">editorial</label>
-                  <input type="text" class="form-control" id="inputEmail4" placeholder="Editorial">
+                  <label>editorial</label>
+                  <input type="text" class="form-control" name="editorial" [(ngModel)]='editorial' placeholder="Editorial">
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="inputPassword4">idioma</label>
-                  <input type="text" class="form-control" id="inputPassword4" placeholder="Aleman">
+                  <label>idioma</label>
+                  <input type="text" class="form-control" name="idioma" [(ngModel)]='idioma' placeholder="Aleman">
                 </div>
         </div>
         <div class="form-row">
@@ -48,7 +48,7 @@
                 
         </div>
         
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="button" (click)='Saveform()' class="btn btn-primary">Sign in</button>
         
       </form>
       
