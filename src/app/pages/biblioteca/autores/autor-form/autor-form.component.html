@@ -1,31 +1,43 @@
   
 {{titulo}}
 <br>
-<form>
+<form FormGroup="autorFormulario">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label>code</label>
+      <input type="text"  name="code" class="form-control" FormControlName="code">
+    </div>
+  </div>
   <div class="form-row">
     <div class="form-group col-md-6">
       <label>Nombre</label>
-      <input type="text" [(ngModel)]="nombre" name="nombre" class="form-control" placeholder="nombre">
+      <input type="text"  name="name" class="form-control" FormControlName="name">
     </div>
   </div>
   <div class="form-row">
     <div class="form-group col-md-6">
       <label>Apellido</label>
-      <input type="text" [(ngModel)]="apellido" name="apellido" class="form-control" placeholder="apellido">
+      <input type="text"  name="lastname" class="form-control" FormControlName="lastname">
     </div>
   </div>
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="inputEmail4">Fecha de nacimiento</label>
-      <input type="text" [(ngModel)]="fechanac" name="fechanac" class="form-control" placeholder="fecha">
+      <label>Año de nacimiento</label>
+      <input type="text"  name="bd_year" class="form-control" FormControlName="bd_year">
     </div>
   </div>
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label>Nacionalidad</label>
-      <input type="text" [(ngModel)]="nacionalidad" name="nacionalidad" class="form-control" placeholder="nacionalidad">
+      <label>Año de fallecimiento</label>
+      <input type="text"  name="death_year" class="form-control" FormControlName="death_year">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label>lugar de nacimiento</label>
+      <input type="text"  name="bd_place" class="form-control" FormControlName="bd_place">
     </div>
   </div>
   
-  <button type="submit" (click)="Saveform()" class="btn btn-primary">Guardar</button>
+  <button type="submit" class="btn btn-primary">Guardar</button>
 </form>
