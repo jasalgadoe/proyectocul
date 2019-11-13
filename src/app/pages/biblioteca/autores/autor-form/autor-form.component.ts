@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { AuthorService } from 'src/app/services/author.service';
 
 @Component({
   selector: 'app-autor-form',
@@ -9,8 +10,17 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 export class AutorFormComponent implements OnInit {
   public autorFormulario: FormGroup;
   public titulo="Autores";
-  constructor(protected fb:FormBuilder) { }
+  public author :any;
+  constructor(protected fb:FormBuilder,protected service:AuthorService) {
+    this.createForm()
+   }
   ngOnInit() {
+    this.service.getAuthors().subscribe(data=>{
+      this.author=data;
+    });
+  }
+  saveAuthor(){
+    this.service.postAuthor(this.autorFormulario.value).subscribe(data=>alert("listo"))
   }
   createForm(){
     this.autorFormulario = this.fb.group({
